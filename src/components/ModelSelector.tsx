@@ -54,6 +54,14 @@ const PROVIDERS: Provider[] = [
     ],
   },
   {
+    displayName: 'z.ai',
+    providerId: 'zhipu',
+    models: [
+      { id: 'glm-4.7-flash', displayName: 'GLM 4.7 Flash' },
+      { id: 'glm-4.5-flash', displayName: 'GLM 4.5 Flash' },
+    ],
+  },
+  {
     displayName: 'OpenRouter',
     providerId: 'openrouter',
     models: [], // User types model name directly

@@ -23,6 +23,7 @@ const FAST_MODELS: Record<string, string> = {
   xai: 'grok-4-1-fast-reasoning',
   openrouter: 'openrouter:openai/gpt-4o-mini',
   moonshot: 'kimi-k2-5',
+  zhipu: 'glm-4.7-flash',
 };
 
 /**
@@ -99,6 +100,15 @@ const MODEL_PROVIDERS: Record<string, ModelFactory> = {
       apiKey: getApiKey('MOONSHOT_API_KEY', 'Moonshot'),
       configuration: {
         baseURL: 'https://api.moonshot.cn/v1',
+      },
+    }),
+  'glm-': (name, opts) =>
+    new ChatOpenAI({
+      model: name,
+      ...opts,
+      apiKey: getApiKey('ZHIPU_API_KEY', 'Zhipu'),
+      configuration: {
+        baseURL: 'https://api.z.ai/api/paas/v4/',
       },
     }),
   'ollama:': (name, opts) =>

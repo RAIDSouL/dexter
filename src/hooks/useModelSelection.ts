@@ -116,6 +116,12 @@ export function useModelSelection(
     if (providerId) {
       setPendingProvider(providerId);
       
+      // Check if API key exists (skip for Ollama which doesn't need one)
+      if (providerId !== 'ollama' && !checkApiKeyExistsForProvider(providerId)) {
+        setAppState('api_key_input');
+        return;
+      }
+      
       // OpenRouter uses free-text model input instead of a list
       if (providerId === 'openrouter') {
         setPendingModels([]);
