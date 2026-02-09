@@ -23,7 +23,7 @@ const FAST_MODELS: Record<string, string> = {
   xai: 'grok-4-1-fast-reasoning',
   openrouter: 'openrouter:openai/gpt-4o-mini',
   moonshot: 'kimi-k2-5',
-  zhipu: 'glm-4.7-flash',
+  zhipu: 'glm-4.7-flashx',
 };
 
 /**

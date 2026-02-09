@@ -57,8 +57,9 @@ const PROVIDERS: Provider[] = [
     displayName: 'z.ai',
     providerId: 'zhipu',
     models: [
+      { id: 'glm-4.7', displayName: 'GLM 4.7' },
       { id: 'glm-4.7-flash', displayName: 'GLM 4.7 Flash' },
-      { id: 'glm-4.5-flash', displayName: 'GLM 4.5 Flash' },
+      { id: 'glm-4.7-flashx', displayName: 'GLM 4.7 FlashX' },
     ],
   },
   {
